@@ -10,12 +10,12 @@ import Container from 'components/Container';
 import Map from 'components/Map';
 
 const LOCATION = {
-  lat: 39.8283,
-  lng: -98.5795
+  lat: 0,
+  lng: 0
 };
 
 const CENTER = [LOCATION.lat, LOCATION.lng];
-const DEFAULT_ZOOM =3;
+const DEFAULT_ZOOM = 2;
 
 const IndexPage = () => {
   /**
@@ -34,6 +34,7 @@ const IndexPage = () => {
   });
 
   const hasCountries = Array.isArray(countries) && countries.length > 0;
+  
   const dashboardStats = [
     {
       primary: {
@@ -193,6 +194,12 @@ const IndexPage = () => {
               );
             })}
           </ul>
+          <select id="cars" name="cars">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+          </select>
         </div>
         <div className="tracker-last-updated">
             <p>
